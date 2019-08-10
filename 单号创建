@@ -1,0 +1,12 @@
+在00000000到99999999之间创建8位数单号，并按顺序打印出来
+
+changdu = 8
+nums = []
+for i in range(10**9):
+	if '4' in str(i) or '3' in str(i) or '7' in str(i):
+		continue
+	if len(str(i)) < changdu:
+		x = (changdu - len(str(i))) * str(0) + str(i)
+		nums.append(x)
+	else:
+		nums.append(str(i))
